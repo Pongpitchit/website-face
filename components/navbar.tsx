@@ -9,9 +9,11 @@ import { useState, useEffect } from "react"
 import { createClient } from "@/lib/supabase/client"
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/cart", label: "Cart" },
+  { href: "/", label: "หน้าหลัก" },
+  { href: "/products", label: "สินค้าที่ระลึก" },
+  { href: "/video", label: "วิดีโอ" },
+  { href: "/cart", label: "ตะกร้า" },
+  { href: "/about", label: "เกี่ยวกับ" },
 ]
 
 export function Navbar() {
@@ -91,7 +93,7 @@ export function Navbar() {
           ) : (
             <Link href="/auth/login">
               <Button variant="default" size="sm">
-                Sign In
+                เข้าสู่ระบบ
               </Button>
             </Link>
           )}
@@ -120,7 +122,7 @@ export function Navbar() {
                 {!user && (
                   <Link href="/auth/sign-up" onClick={() => setIsOpen(false)}>
                     <Button variant="outline" className="w-full mt-4">
-                      Create Account
+                      สมัครสมาชิก
                     </Button>
                   </Link>
                 )}

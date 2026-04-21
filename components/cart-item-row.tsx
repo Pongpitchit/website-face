@@ -79,10 +79,18 @@ export function CartItemRow({ item, product }: CartItemRowProps) {
         <div className="flex gap-4">
           {/* Product Image */}
           <Link href={`/products/${product.id}`} className="flex-shrink-0">
-            <div className="w-24 h-24 bg-muted rounded-lg overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center">
-                <span className="text-4xl">{product.emoji || "📦"}</span>
-              </div>
+            <div className="w-24 h-24 bg-muted rounded-lg overflow-hidden">
+              {product.image_url ? (
+                <img
+                  src={product.image_url}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center">
+                  <span className="text-4xl">📦</span>
+                </div>
+              )}
             </div>
           </Link>
 

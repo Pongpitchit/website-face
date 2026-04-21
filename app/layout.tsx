@@ -11,7 +11,7 @@ const nunito = Nunito({ subsets: ["latin"], variable: '--font-nunito' });
 export const metadata: Metadata = {
   title: 'Stormalong Shop - The Marvelous Misadventures of Flapjack',
   description: 'Welcome to Stormalong Harbor! Shop for adventure gear, candy, and collectibles from The Marvelous Misadventures of Flapjack.',
-  generator: 'v0.app',
+  generator: 'Flapjack',
   icons: {
     icon: [
       {
